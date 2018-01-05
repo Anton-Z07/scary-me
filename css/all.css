@@ -1,0 +1,784 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.25;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button, input {
+	outline: none;
+}
+
+
+
+
+* {
+	font-family: 'Slabo 27px', serif;
+}
+body {
+	font-size: 18px;
+}
+.float-right {
+	float: right;
+}
+.clear-fix {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
+a {
+	cursor: pointer;
+}
+/* ------ Input'ы --------------- */
+textarea {
+	resize: none;
+}
+textarea.elastic {
+	overflow: hidden;
+	min-height: 50px;
+}
+input[type=text], input[type=password], textarea {
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
+}
+input.error, textarea.error {
+	background-color: #FFD3D3;
+}
+.input-group {
+	display: table;
+	position: relative;
+}
+.input-group input {
+	float: left;
+	display: table-cell;
+	vertical-align: top;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.input-group div {
+	display: table-cell;
+	width: 1%;
+	vertical-align: top;
+	position: relative;
+}
+.input-group div button {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -1px;
+}
+.form .input-group input[type=text],
+.form .input-group input[type=password] {
+	margin-bottom: 0;
+}
+/* ------ конец Input'ы --------- */
+
+/* ------ разметка -------------- */
+[class^='col-']:last-child:after {
+	content: ' ';
+	clear: both;
+}
+.col-1 {
+	width: 33.33%;
+	float: left;
+}
+.col-2 {
+	width: 66.66%;
+	float: left;
+}
+.col-3 {
+	width: 100%;
+}
+@media (max-width: 700px) {
+	.col-1, .col-2 {
+		width: 100%;
+	}
+}
+/* ------ конец разметка -------- */
+
+/* ------ кнопки ---------------- */
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.btn.btn-sm {
+	padding: 4px 8px;
+}
+.btn-block {
+	padding: 10px 20px;
+	display: block;
+	width: 100%;
+	font-size: 24px;
+}
+
+.btn.btn-blue {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+}
+	.btn.btn-blue:hover {
+		color: #fff;
+		background-color: #337ab7;
+		border-color: #2e6da4;
+	}
+.btn.btn-red {
+	color: #fff;
+	background-color: #BC3333;
+	border-color: #A12424;
+}
+	.btn.btn-red:hover {
+		color: #fff;
+		background-color: #A12424;
+		border-color: #7C1C1C;
+	}
+.btn.btn-white {
+	color: #000;
+	background-color: #fff;
+	border-color: #ccc;
+}
+.button-holder {
+	text-align: right;
+}
+/* ------ конец кнопки ---------- */
+
+/* ------- диалоги -------------- */
+#modal-shadow {
+	position: fixed;
+	background-color: #000;
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	cursor: pointer;
+	z-index: 100;
+}
+.modal-dialog {
+	position: fixed;
+	width: 400px;
+	height: 300px;
+	background-color: white;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	padding: 20px;
+	z-index: 101;
+}
+/* ------- диалоги -------------- */
+
+/* ----------- заголовки -------- */
+div.title, h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+/* ----- конец заголовки -------- */
+
+/* ----------- формы ------------ */
+.form input[type=text], .form input[type=password], .form-row, 
+.form textarea {
+	margin-bottom: 15px;
+	width: 100%;
+	box-sizing: border-box;
+}
+/* --------конец формы ---------- */
+
+/* ---------- Pills ------------- */
+.pills li {
+	display: inline-block;
+	background-color: #ccc;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.pills li.active {
+	background-color: #337ab7;
+	color: white;
+	cursor: default;
+}
+/* ------- конец Pills ---------- */
+
+/* -------- pagination ---------- */
+.pagination .space {
+	margin: 0 6px 0 3px;
+}
+.pagination a {
+	background-color: #BC3333;
+	color: white;
+	width: 26px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 3px;
+	padding: 5px 0;
+	text-decoration: none;
+}
+.pagination a.active {
+	background-color: white;
+	color: #BC3333;
+	font-weight: bold;
+}
+/* ------ конец pagination ------ */
+
+/* ---------- Просмотр изображений ------------ */
+#image-viewer {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	max-height: 90%;
+	z-index: 200;
+}
+#image-viewer img {
+	max-width: 100%;
+}
+.viewable {
+	cursor: pointer;
+}
+/* -------- конец Просмотр изображений -------- */
+
+/* ------------------- Hint ------------------- */
+.hint-button {
+	position: relative;
+}
+.hint-content-wrap {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 300px;
+	text-align: center;
+	cursor: pointer;
+	visibility: hidden;
+	display: none;
+}
+.hint-content {
+	background-color: white;
+	border: 1px solid #BC3333;
+	border-radius: 6px;
+	padding: 5px;
+	display: inline-block;
+	visibility: visible;
+}
+.hint-content:after {
+	content: ' ';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #BC3333 transparent transparent transparent;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+/* ---------------- конец Hint ---------------- */
+
+/* ------------- Popup-message ---------------- */
+#popup-message {
+	display: none;
+	position: fixed;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px 15px;
+	text-align: center;
+	z-index: 101;
+	background-color: white;
+	font-size: 20px;
+}
+#popup-message.info {
+	color: white;
+	background-color: #299629;
+}
+#popup-message.error {
+	color: white;
+	background-color: #BC3333;
+}
+/* ------------- Popup-message ---------------- */
+
+/* ------------------ Hover ------------------- */
+/* Rectangle Out */
+.hvr-rectangle-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.hvr-rectangle-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #BC3333;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* ---------------- end Hover ------------------ */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+
+
+
+html, body {
+	height: 100%;
+}
+a {
+	color: #BC3333;
+}
+#page {
+	min-height: calc(100% - 70px);
+	max-width: 1300px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+header {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+header > a {
+	font-size: 40px;
+	text-decoration: none;
+}
+@media all and (min-width:40em) {
+	header > a {
+		font-size: 50px;
+	}
+}
+#content {
+	padding-top: 20px;
+	text-align: left;
+}
+footer {
+	height: 60px;
+	background-color: #932929;
+	color: #bbb;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.flex-card-list {
+	display:flex;
+	flex-wrap:wrap;
+}
+.flex-card-listitem {
+	display:flex;
+	padding-right: 1em;
+	box-sizing: border-box;
+}
+@media all and (min-width:40em) {
+	.flex-card-list li {
+		width:50%;
+	}
+}
+@media all and (min-width:60em) {
+	.flex-card-list li {
+		width:33.33%;
+	}
+}
+
+article {
+	vertical-align: top;
+}
+article.post-main {
+	margin-bottom: 30px;
+}
+article.post-main:nth-child(3n+2) {
+	margin: 0 40px;
+}
+article.post-main > .image-box {
+	position: relative;
+	width: 100%;
+}
+article.post-main > .image-box:before {
+	content: "";
+	display: block;
+	padding-top: 50%;
+}
+article.post-main > .image-box a {
+	display: inline-block;
+    height: auto;
+    overflow: hidden;
+    position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+article.post-main img {
+	width: 100%;
+	top: -50%;
+}
+article .theme {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+article.post-main .theme span {
+	float: right;
+}
+article h2 {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+article h2 a {
+	text-decoration: none;
+	color: black;
+}
+
+article.post {
+	width: 100%;
+	display: inline-block;
+	max-width: 900px;
+	margin-bottom: 30px;
+}
+article.post .theme span {
+	margin-left: 30px;
+}
+article.post .post-image, iframe {
+	max-width: 100%;
+}
+article.post p {
+	margin-bottom: 10px;
+}
+
+article.recommended {
+	display: inline-block;
+	width: 200px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+}
+article.recommended img {
+	width: 100%;
+}
+article.recommended .title {
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+}
+.sidebar {
+	display: block;
+}
+.sidebar > div {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+@media all and (min-width:1275px) {
+	.sidebar {
+		width: 200px;
+		display: inline-block;
+	}
+	article.recommended {
+		display: block;
+		margin-bottom: 30px;
+	}
+	article.post { 
+		margin-right: 100px;
+	}
+}
+
+.red {
+	color: #BC3333;
+}
+p {
+	line-height: 1.5;
+}
+
+.gallery {
+	margin-bottom: 20px;
+}
+.gallery .images img {
+	display: none;
+}
+.viewport {
+	background-color: #555;
+	text-align: center;
+	position: relative;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.viewport.light {
+	background-color: white;
+}
+.viewport:before{
+	content: "";
+	display: block;
+	padding-top: 60%; 	/* initial ratio of 1:1*/
+}
+.viewport img {
+	vertical-align: bottom;
+	height: 100%;
+	user-select: none;
+	max-width: 100%;
+	position:  absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.viewport .fa {
+	position: absolute;
+	font-size: 50px;
+	color: #d0d0d0;
+	top: 50%;
+	margin-top: -25px;
+}
+.viewport .fa-angle-left {
+	left: 20px;
+}
+.viewport .fa-angle-right {
+	right: 20px;
+}
+.gallery .viewport .nav-button {
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0,0,0,0);
+	top: 0;
+	cursor: pointer;
+}
+.gallery .viewport .nav-button:first-child {
+	left: 0;
+}
+.gallery .viewport .nav-button:last-child {
+	right: 0;
+}
+.gallery .viewport .nav-button:hover {
+	background-color: rgba(0,0,0,0.2);
+}
+.gallery .viewport .nav-button:hover .fa {
+	color: #fff;
+}
+.gallery .counter {
+	font-weight: bold;
+}
+.gallery .caption {
+	min-height: 25px;
+}
+
+#image-viewer {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90%;
+	height: 90%;
+	z-index: 200;
+}
+.viewable {
+	cursor: pointer;
+}
+#modal-shadow {
+	position: fixed;
+	background-color: #000;
+	opacity: 0.6;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.mtop {
+	margin-top: 30px;
+}
+.no-dec {
+	text-decoration: none;
+}
+
+#random_movie {
+	margin-top: 20px;
+	text-align: center;
+	display: none;
+}
+#random_movie > i {
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+#year-range {
+	padding: 0 20px;
+	margin-bottom: 40px;
+}
+.year-range-labels {
+	height: 30px;
+	position: relative;
+}
+.year-range-line {
+	position: relative;
+	height: 1px;
+	background-color: #555;
+}
+.year-range-dash {
+	width: 1px;
+	height: 15px;
+	background-color: #555;
+	position: absolute;
+	top: -7px;
+	z-index: 10;
+}
+.year-range-dash.sub {
+	height: 9px;
+	top: -4px;
+}
+.year-range-label {
+	position: absolute;
+	top: 0;
+	margin-left: -15px;
+}
+.year-range-pointer {
+	display: inline-block;
+	width: 16px;
+	height: 24px;
+	background-image: url(/images/pointer.png);
+	position: absolute;
+	margin-left: -7px;
+	cursor: pointer;
+	z-index: 20;
+}
+.year-range-pointers {
+	position: relative;
+}
+.p-left {
+	left: 0;
+}
+.p-right {
+	left: 100%;
+}
+.year-pointer-filling {
+	position: absolute;
+	background-color: #BC3333;
+	height: 5px;
+	margin-top: -3px;
+	left: 0%;
+	width: 100%;
+}
+.year-range-touchzone {
+	height: 8px;
+	padding-top: 7px;
+}
+
+.nav-buttons {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.nav-buttons .hid {
+	visibility: hidden;
+}
+.nav-buttons a {
+	font-weight: bold;
+	font-size: 20px;
+	padding: 10px 20px;
+}
+.nav-buttons span {
+	display: inline-block;
+	padding: 10px 10px;
+	color: #ccc;
+	vertical-align: top;
+}
+
